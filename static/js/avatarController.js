@@ -1,64 +1,79 @@
-/**
- * Avatar visualization and animations
- */
+// avatarController.js - Controls the avatar animations and states
 
-import { debug } from './app.js';
-
-// DOM elements
-const avatarContainer = document.getElementById('avatar-container');
-const avatarState = avatarContainer.querySelector('.avatar-state');
-const visualizer = document.getElementById('audioVisualizer');
-const visualizerBars = document.querySelectorAll('.visualizer-bar');
-
-let visualizerInterval;
-
-/**
- * Start visualizer animation (random bars)
- */
-export function startVisualizer() {
-    stopVisualizer(); // clear previous
-    visualizer.style.display = 'flex';
-    visualizerInterval = setInterval(() => {
-        visualizerBars.forEach(bar => {
-            bar.style.height = `${Math.random() * 40 + 5}px`;
-        });
-    }, 100);
-}
-
-/**
- * Stop visualizer animation
- */
-export function stopVisualizer() {
-    if (visualizerInterval) {
-        clearInterval(visualizerInterval);
-        visualizerInterval = null;
+// Avatar animation properties
+const avatarAnimations = {
+    idle: {
+        frames: 1,
+        fps: 1
+    },
+    listening: {
+        frames: 3,
+        fps: 2
+    },
+    thinking: {
+        frames: 2,
+        fps: 1
+    },
+    speaking: {
+        frames: 4,
+        fps: 3
     }
-    visualizer.style.display = 'none';
-    visualizerBars.forEach(bar => {
-        bar.style.height = '10px';
-    });
-}
+};
 
-/**
- * Update avatar state with color/animation
- */
-export function updateAvatarState(state) {
-    avatarContainer.className = 'idle'; // Reset class
-    avatarContainer.classList.remove('idle', 'listening', 'thinking', 'speaking');
+// Current animation
+let currentAnimation = null;
+let animationInterval = null;
+let currentFrame = 0;
 
-    if (state === 'listening') {
-        avatarContainer.classList.add('listening');
-        avatarState.textContent = 'Listening...';
-    } else if (state === 'thinking') {
-        avatarContainer.classList.add('thinking');
-        avatarState.textContent = 'Thinking...';
-    } else if (state === 'speaking') {
-        avatarContainer.classList.add('speaking');
-        avatarState.textContent = 'Speaking...';
-    } else {
-        avatarContainer.classList.add('idle');
-        avatarState.textContent = 'Waiting for your voice...';
+// Start animating the avatar based on state
+function startAvatarAnimation(state) {
+    // Stop any existing animation
+    stopAvatarAnimation();
+    
+    // Get animation properties
+    const animation = avatarAnimations[state];
+    if (!animation) {
+        console.error(`Unknown animation state: ${state}`);
+        return;
     }
-
-    debug(`Avatar state changed to: ${state}`, 'info');
+    
+    // Set current animation
+    currentAnimation = state;
+    currentFrame = 0;
+    
+    // Start the animation interval
+    if (animation.frames > 1) {
+        const frameTime = 1000 / animation.fps;
+        animationInterval = setInterval(() => {
+            currentFrame = (currentFrame + 1) % animation.frames;
+            updateAvatarFrame();
+        }, frameTime);
+    }
+    
+    // Set initial frame
+    updateAvatarFrame();
 }
+
+// Stop the avatar animation
+function stopAvatarAnimation() {
+    if (animationInterval) {
+        clearInterval(animationInterval);
+        animationInterval = null;
+    }
+    currentAnimation = null;
+}
+
+// Update the avatar frame
+function updateAvatarFrame() {
+    const avatarElement = document.getElementById('avatar');
+    if (!avatarElement || !currentAnimation) {
+        return;
+    }
+    
+    // For now, we're just using CSS classes for animation
+    // In the future, this could update actual images or 3D models
+}
+
+// Export functions to the global scope
+window.startAvatarAnimation = startAvatarAnimation;
+window.stopAvatarAnimation = stopAvatarAnimation;

@@ -1,114 +1,88 @@
-# """
-# Configuration and environment setup
-# """
-# import os
-# from dotenv import load_dotenv
-# from pathlib import Path
-# from modules.logger import get_logger
-
-# # Setup logger
-# logger = get_logger("config")
-
-# def setup_environment():
-#     """Load environment variables from .env file"""
-#     env_path = Path('.') / '.env'
-#     load_dotenv(dotenv_path=env_path)
-#     logger.info("Environment variables loaded successfully")
-    
-#     # Check for API keys
-#     api_keys_status = check_api_keys()
-#     if api_keys_status:
-#         logger.info("API keys loaded successfully")
-#     else:
-#         logger.warning("Some API keys are missing")
-
-# def check_api_keys():
-#     """Check if all required API keys are present"""
-#     required_keys = ['OPENAI_API_KEY', 'ELEVENLABS_API_KEY']
-#     all_present = True
-    
-#     for key in required_keys:
-#         if not os.getenv(key):
-#             logger.warning(f"Missing API key: {key}")
-#             all_present = False
-    
-#     return all_present
-
-# def get_openai_key():
-#     """Get OpenAI API key from environment variables"""
-#     api_key = os.getenv('OPENAI_API_KEY')
-#     if not api_key:
-#         logger.error("OpenAI API key not found in environment variables")
-#     return api_key
-
-# def get_elevenlabs_key():
-#     """Get ElevenLabs API key from environment variables"""
-#     api_key = os.getenv('ELEVENLABS_API_KEY')
-#     if not api_key:
-#         logger.error("ElevenLabs API key not found in environment variables")
-#     return api_key
-
-
-# modules/config.py
-
 """
-Configuration and environment setup
+Configuration module for the Voice Avatar Chatbot
 """
 
 import os
-import logging
+import sys
 from dotenv import load_dotenv
 from modules.logger import get_logger
 
-# Setup logger
 logger = get_logger("config")
+
+# Load environment variables from .env file
+load_dotenv()
+
+def get_env_variable(key, default=None, required=False):
+    """
+    Get an environment variable, with optional default value
+    and required flag for validation
+    """
+    value = os.getenv(key, default)
+    if required and value is None:
+        logger.error(f"Required environment variable {key} is not set")
+        sys.exit(1)
+    return value
+
+def get_openai_api_key():
+    """Get OpenAI API key from environment variables"""
+    return get_env_variable("OPENAI_API_KEY", required=True)
+
+def get_openai_key():
+    """Alias for get_openai_api_key to maintain compatibility with older code"""
+    return get_openai_api_key()
+
+def get_tavily_api_key():
+    """Get Tavily API key from environment variables"""
+    return get_env_variable("TAVILY_API_KEY")
 
 def setup_environment():
     """
-    Load environment variables from .env file
+    Setup environment and validate configuration
+    Compatibility function for existing codebase
+    """
+    return load_config()
+
+def load_config():
+    """
+    Load and validate all required configuration
     """
     try:
-        # Try to load from .env file
-        load_dotenv()
-        logger.info("Environment variables loaded successfully")
+        # Check required API keys
+        missing_keys = []
         
-        # Check for required API keys
-        _check_api_keys()
+        # Check OpenAI API key
+        openai_api_key = get_openai_api_key()
+        if not openai_api_key:
+            missing_keys.append("OPENAI_API_KEY")
+            
+        # Check Tavily API key
+        tavily_api_key = get_tavily_api_key()
+        if not tavily_api_key:
+            missing_keys.append("TAVILY_API_KEY")
+            
+        # Log any missing keys
+        if missing_keys:
+            logger.warning(f"Missing API keys: {', '.join(missing_keys)}")
+        
+        logger.info("Environment variables loaded successfully")
+        return True
         
     except Exception as e:
-        logger.error(f"Error loading environment: {str(e)}")
-        # Continue anyway - we'll check for keys when needed
+        logger.error(f"Error loading configuration: {str(e)}")
+        return False
 
-def _check_api_keys():
-    """
-    Check that required API keys are present
-    """
-    required_keys = {
-        'OPENAI_API_KEY': get_openai_key(),
-        'SERPER_API_KEY': get_serper_api_key()
-    }
-    
-    missing_keys = [key for key, value in required_keys.items() if not value]
-    
-    if missing_keys:
-        logger.warning(f"Missing API keys: {', '.join(missing_keys)}")
-    else:
-        logger.info("API keys loaded successfully")
+# Application configuration
+DEBUG = get_env_variable("DEBUG", default="False").lower() in ["true", "1", "yes"]
+PORT = int(get_env_variable("PORT", default="8000"))
+HOST = get_env_variable("HOST", default="0.0.0.0")
 
-def get_openai_key():
-    """
-    Get OpenAI API key from environment
-    """
-    return os.getenv("OPENAI_API_KEY")
+# OpenAI Configuration
+OPENAI_MODEL = get_env_variable("OPENAI_MODEL", default="gpt-3.5-turbo")
+MAX_TOKENS = int(get_env_variable("MAX_TOKENS", default="500"))
+TEMPERATURE = float(get_env_variable("TEMPERATURE", default="0.7"))
 
-def get_serper_api_key():
-    """
-    Get Serper API key from environment
-    """
-    return os.getenv("SERPER_API_KEY")
-
-# Add additional configuration settings here
-# Example: model settings, etc.
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4-turbo-preview")
-MAX_TOKENS = int(os.getenv("MAX_TOKENS", "500"))
-TEMPERATURE = float(os.getenv("TEMPERATURE", "0.7"))
+# Default system message for chat
+DEFAULT_SYSTEM_MESSAGE = get_env_variable(
+    "DEFAULT_SYSTEM_MESSAGE", 
+    default="You are a helpful, friendly, and intelligent AI assistant."
+)

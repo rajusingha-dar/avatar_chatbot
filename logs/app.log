@@ -472,3 +472,342 @@
 2025-04-27 12:23:44,116 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
 2025-04-27 12:23:48,977 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
 2025-04-27 12:23:48,978 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'I can't provide real-time weat...'
+2025-04-27 14:54:23,312 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 14:54:23,313 - voice_avatar_chatbot.config - WARNING - Missing API keys: SERPER_API_KEY
+2025-04-27 14:54:23,316 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 14:54:23,317 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 14:54:36,071 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 14:54:36,074 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 14:54:36,538 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 14:54:37,202 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 14:54:41,568 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 14:54:41,569 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen?"}]
+2025-04-27 14:54:41,571 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 14:54:43,573 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 14:54:43,574 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! Yes, I'm here to listen...'
+2025-04-27 14:54:57,751 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 14:54:57,752 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen?"}, {"role": "assistant", "content": "Hello! Yes, I'm here to listen..."}, {"role": "user", "content": "I'm thinking of like knowing w..."}]
+2025-04-27 14:54:57,754 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: I'm thinking of like knowing what is the temperature in Kolkata.
+2025-04-27 14:55:09,805 - voice_avatar_chatbot.routes.chat - ERROR - Error performing search: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)
+2025-04-27 14:55:09,806 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 14:55:13,901 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 14:55:13,902 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'I can't provide real-time data...'
+2025-04-27 14:55:13,905 - voice_avatar_chatbot.routes.search - INFO - Search request received: I'm thinking of like knowing w...
+2025-04-27 14:55:13,905 - voice_avatar_chatbot.routes.search - ERROR - Serper API key not found
+2025-04-27 15:15:01,404 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 15:15:02,585 - voice_avatar_chatbot.routes - WARNING - Text-to-speech module not available
+2025-04-27 15:15:02,587 - voice_avatar_chatbot.routes - INFO - Speech routes loaded
+2025-04-27 15:15:02,587 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 15:15:02,588 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 15:15:10,335 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:15:10,336 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:15:10,593 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:15:11,346 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:15:16,663 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 15:15:16,665 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen ..."}]
+2025-04-27 15:15:16,669 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:15:18,625 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:15:18,626 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! Yes, I can hear you. Ho...'
+2025-04-27 15:15:31,298 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 15:15:31,299 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen ..."}, {"role": "assistant", "content": "Hello! Yes, I can hear you. Ho..."}, {"role": "user", "content": "I want to know the latest weat..."}]
+2025-04-27 15:15:31,300 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: I want to know the latest weather of Kolkata.
+2025-04-27 15:15:48,354 - voice_avatar_chatbot.routes.chat - ERROR - Error performing search: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=15)
+2025-04-27 15:15:48,355 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:15:50,179 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:15:50,179 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Sure! I can help with that. Le...'
+2025-04-27 15:15:50,181 - voice_avatar_chatbot.routes.search - INFO - Search request received: I want to know the latest weat...
+2025-04-27 15:15:50,186 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: I want to know the latest weather of Kolkata.
+2025-04-27 15:15:54,917 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:19:22,040 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 6 messages
+2025-04-27 15:19:22,042 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen ..."}, {"role": "assistant", "content": "Hello! Yes, I can hear you. Ho..."}, {"role": "user", "content": "I want to know the latest weat..."}, {"role": "assistant", "content": "Sure! I can help with that. Le..."}, {"role": "user", "content": "Can you just stop?"}]
+2025-04-27 15:19:22,044 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:19:23,220 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:19:23,222 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Of course! Just let me know if...'
+2025-04-27 15:23:53,016 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 15:23:53,852 - voice_avatar_chatbot.routes - WARNING - Text-to-speech module not available
+2025-04-27 15:23:53,856 - voice_avatar_chatbot.routes - INFO - Speech routes loaded
+2025-04-27 15:23:53,857 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 15:23:53,857 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 15:24:00,132 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:24:00,132 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:24:00,253 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:24:00,732 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:24:03,812 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 15:24:03,814 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}]
+2025-04-27 15:24:03,816 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:24:05,533 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:24:05,534 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hi there! How can I assist you...'
+2025-04-27 15:24:16,876 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 15:24:16,878 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know the latest weat..."}]
+2025-04-27 15:24:16,879 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: I want to know the latest weather or temperature in Kolkata.
+2025-04-27 15:24:16,881 - voice_avatar_chatbot.routes.search - INFO - Search request received: I want to know the latest weat...
+2025-04-27 15:24:16,882 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: I want to know the latest weather or temperature in Kolkata.
+2025-04-27 15:24:21,737 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:24:21,738 - voice_avatar_chatbot.routes.chat - INFO - Search completed successfully
+2025-04-27 15:24:21,739 - voice_avatar_chatbot.routes.chat - INFO - Added search results as context to the prompt
+2025-04-27 15:24:21,740 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:24:23,509 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:24:23,510 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'The current weather in Kolkata...'
+2025-04-27 15:24:43,806 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 6 messages
+2025-04-27 15:24:43,808 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know the latest weat..."}, {"role": "assistant", "content": "The current weather in Kolkata..."}, {"role": "user", "content": "Who is the writer for?"}]
+2025-04-27 15:24:43,809 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:24:46,699 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:24:46,700 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'I'm here to assist you with an...'
+2025-04-27 15:24:57,677 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 8 messages
+2025-04-27 15:24:57,678 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know the latest weat..."}, {"role": "assistant", "content": "The current weather in Kolkata..."}, {"role": "user", "content": "Who is the writer for?"}, {"role": "assistant", "content": "I'm here to assist you with an..."}, {"role": "user", "content": "Who is the author of Harry Pot..."}]
+2025-04-27 15:24:57,680 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:24:59,033 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:24:59,034 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'J.K. Rowling is the author of ...'
+2025-04-27 15:25:13,545 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 10 messages
+2025-04-27 15:25:13,549 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know the latest weat..."}, {"role": "assistant", "content": "The current weather in Kolkata..."}, {"role": "user", "content": "Who is the writer for?"}, {"role": "assistant", "content": "I'm here to assist you with an..."}, {"role": "user", "content": "Who is the author of Harry Pot..."}, {"role": "assistant", "content": "J.K. Rowling is the author of ..."}, {"role": "user", "content": "What are the latest update on ..."}]
+2025-04-27 15:25:13,551 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: What are the latest update on the?
+2025-04-27 15:25:13,552 - voice_avatar_chatbot.routes.search - INFO - Search request received: What are the latest update on ...
+2025-04-27 15:25:13,553 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: What are the latest update on the?
+2025-04-27 15:25:17,189 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:25:17,190 - voice_avatar_chatbot.routes.chat - INFO - Search completed successfully
+2025-04-27 15:25:17,191 - voice_avatar_chatbot.routes.chat - INFO - Added search results as context to the prompt
+2025-04-27 15:25:17,191 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:25:18,725 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:25:18,726 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Could you please provide more ...'
+2025-04-27 15:25:33,066 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 12 messages
+2025-04-27 15:25:33,068 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know the latest weat..."}, {"role": "assistant", "content": "The current weather in Kolkata..."}, {"role": "user", "content": "Who is the writer for?"}, {"role": "assistant", "content": "I'm here to assist you with an..."}, {"role": "user", "content": "Who is the author of Harry Pot..."}, {"role": "assistant", "content": "J.K. Rowling is the author of ..."}, {"role": "user", "content": "What are the latest update on ..."}, {"role": "assistant", "content": "Could you please provide more ..."}, {"role": "user", "content": "What is the most recent update..."}]
+2025-04-27 15:25:33,069 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:25:35,107 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:25:35,108 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'I'm sorry, I couldn't find any...'
+2025-04-27 15:25:58,004 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 14 messages
+2025-04-27 15:25:58,006 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know the latest weat..."}, {"role": "assistant", "content": "The current weather in Kolkata..."}, {"role": "user", "content": "Who is the writer for?"}, {"role": "assistant", "content": "I'm here to assist you with an..."}, {"role": "user", "content": "Who is the author of Harry Pot..."}, {"role": "assistant", "content": "J.K. Rowling is the author of ..."}, {"role": "user", "content": "What are the latest update on ..."}, {"role": "assistant", "content": "Could you please provide more ..."}, {"role": "user", "content": "What is the most recent update..."}, {"role": "assistant", "content": "I'm sorry, I couldn't find any..."}, {"role": "user", "content": "What is the square of 25?"}]
+2025-04-27 15:25:58,007 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:26:00,162 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:26:00,163 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'The square of 25 is 625. If yo...'
+2025-04-27 15:26:17,384 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 16 messages
+2025-04-27 15:26:17,386 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know the latest weat..."}, {"role": "assistant", "content": "The current weather in Kolkata..."}, {"role": "user", "content": "Who is the writer for?"}, {"role": "assistant", "content": "I'm here to assist you with an..."}, {"role": "user", "content": "Who is the author of Harry Pot..."}, {"role": "assistant", "content": "J.K. Rowling is the author of ..."}, {"role": "user", "content": "What are the latest update on ..."}, {"role": "assistant", "content": "Could you please provide more ..."}, {"role": "user", "content": "What is the most recent update..."}, {"role": "assistant", "content": "I'm sorry, I couldn't find any..."}, {"role": "user", "content": "What is the square of 25?"}, {"role": "assistant", "content": "The square of 25 is 625. If yo..."}, {"role": "user", "content": "What is the capital of Nepal?"}]
+2025-04-27 15:26:17,388 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:26:19,147 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:26:19,149 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'The capital of Nepal is Kathma...'
+2025-04-27 15:26:30,459 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 18 messages
+2025-04-27 15:26:30,460 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know the latest weat..."}, {"role": "assistant", "content": "The current weather in Kolkata..."}, {"role": "user", "content": "Who is the writer for?"}, {"role": "assistant", "content": "I'm here to assist you with an..."}, {"role": "user", "content": "Who is the author of Harry Pot..."}, {"role": "assistant", "content": "J.K. Rowling is the author of ..."}, {"role": "user", "content": "What are the latest update on ..."}, {"role": "assistant", "content": "Could you please provide more ..."}, {"role": "user", "content": "What is the most recent update..."}, {"role": "assistant", "content": "I'm sorry, I couldn't find any..."}, {"role": "user", "content": "What is the square of 25?"}, {"role": "assistant", "content": "The square of 25 is 625. If yo..."}, {"role": "user", "content": "What is the capital of Nepal?"}, {"role": "assistant", "content": "The capital of Nepal is Kathma..."}, {"role": "user", "content": "Can you?"}]
+2025-04-27 15:26:30,461 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:26:32,267 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:26:32,268 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'I'm here to help! Just let me ...'
+2025-04-27 15:26:47,158 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 20 messages
+2025-04-27 15:26:47,160 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know the latest weat..."}, {"role": "assistant", "content": "The current weather in Kolkata..."}, {"role": "user", "content": "Who is the writer for?"}, {"role": "assistant", "content": "I'm here to assist you with an..."}, {"role": "user", "content": "Who is the author of Harry Pot..."}, {"role": "assistant", "content": "J.K. Rowling is the author of ..."}, {"role": "user", "content": "What are the latest update on ..."}, {"role": "assistant", "content": "Could you please provide more ..."}, {"role": "user", "content": "What is the most recent update..."}, {"role": "assistant", "content": "I'm sorry, I couldn't find any..."}, {"role": "user", "content": "What is the square of 25?"}, {"role": "assistant", "content": "The square of 25 is 625. If yo..."}, {"role": "user", "content": "What is the capital of Nepal?"}, {"role": "assistant", "content": "The capital of Nepal is Kathma..."}, {"role": "user", "content": "Can you?"}, {"role": "assistant", "content": "I'm here to help! Just let me ..."}, {"role": "user", "content": "Can you tell me like a story o..."}]
+2025-04-27 15:26:47,161 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:26:51,878 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:26:51,880 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Of course! Once upon a time, i...'
+2025-04-27 15:27:14,550 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:27:14,551 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:27:14,670 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:27:14,823 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:27:28,702 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:27:28,704 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:27:28,888 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:27:29,384 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:27:32,843 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 15:27:32,845 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello. Hi."}]
+2025-04-27 15:27:32,846 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:27:37,371 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:27:37,372 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! How can I assist you to...'
+2025-04-27 15:27:49,253 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 15:27:49,254 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello. Hi."}, {"role": "assistant", "content": "Hello! How can I assist you to..."}, {"role": "user", "content": "I'm thinking to know what is t..."}]
+2025-04-27 15:27:49,255 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: I'm thinking to know what is the latest update on the AI.
+2025-04-27 15:27:49,256 - voice_avatar_chatbot.routes.search - INFO - Search request received: I'm thinking to know what is t...
+2025-04-27 15:27:49,257 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: I'm thinking to know what is the latest update on the AI.
+2025-04-27 15:27:52,949 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:27:52,950 - voice_avatar_chatbot.routes.chat - INFO - Search completed successfully
+2025-04-27 15:27:52,951 - voice_avatar_chatbot.routes.chat - INFO - Added search results as context to the prompt
+2025-04-27 15:27:52,952 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:27:54,470 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:27:54,472 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'I found some recent updates on...'
+2025-04-27 15:28:17,544 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 6 messages
+2025-04-27 15:28:17,545 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello. Hi."}, {"role": "assistant", "content": "Hello! How can I assist you to..."}, {"role": "user", "content": "I'm thinking to know what is t..."}, {"role": "assistant", "content": "I found some recent updates on..."}, {"role": "user", "content": "Yeah, can you tell me what is ..."}]
+2025-04-27 15:28:17,546 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:28:19,454 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:28:19,455 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'The ADK (AI Development Kit) i...'
+2025-04-27 15:28:43,225 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:28:43,227 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:28:43,333 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:28:43,820 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:29:42,175 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:29:42,177 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:29:42,328 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:29:42,807 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:31:34,990 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 15:31:34,991 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}]
+2025-04-27 15:31:34,992 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:31:36,696 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:31:36,697 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! How can I assist you to...'
+2025-04-27 15:31:41,438 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:31:41,440 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:31:41,547 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:31:41,913 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:31:53,647 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 15:31:53,647 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen?"}]
+2025-04-27 15:31:53,648 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:31:55,285 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:31:55,286 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Yes, I'm here and ready to lis...'
+2025-04-27 15:32:05,290 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 15:32:05,291 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen?"}, {"role": "assistant", "content": "Yes, I'm here and ready to lis..."}, {"role": "user", "content": "What is the temperature in Kol..."}]
+2025-04-27 15:32:05,292 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: What is the temperature in Kolkata right now?
+2025-04-27 15:32:05,293 - voice_avatar_chatbot.routes.search - INFO - Search request received: What is the temperature in Kol...
+2025-04-27 15:32:05,294 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: What is the temperature in Kolkata right now?
+2025-04-27 15:32:08,981 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:32:08,982 - voice_avatar_chatbot.routes.chat - INFO - Search completed successfully
+2025-04-27 15:32:08,983 - voice_avatar_chatbot.routes.chat - INFO - Added search results as context to the prompt
+2025-04-27 15:32:08,984 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:32:10,472 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:32:10,473 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'The current temperature in Kol...'
+2025-04-27 15:32:25,819 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 6 messages
+2025-04-27 15:32:25,820 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen?"}, {"role": "assistant", "content": "Yes, I'm here and ready to lis..."}, {"role": "user", "content": "What is the temperature in Kol..."}, {"role": "assistant", "content": "The current temperature in Kol..."}, {"role": "user", "content": "What is the current update on ..."}]
+2025-04-27 15:32:25,821 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: What is the current update on Sikkim landslides?
+2025-04-27 15:32:25,822 - voice_avatar_chatbot.routes.search - INFO - Search request received: What is the current update on ...
+2025-04-27 15:32:25,823 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: What is the current update on Sikkim landslides?
+2025-04-27 15:32:29,089 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:32:29,090 - voice_avatar_chatbot.routes.chat - INFO - Search completed successfully
+2025-04-27 15:32:29,091 - voice_avatar_chatbot.routes.chat - INFO - Added search results as context to the prompt
+2025-04-27 15:32:29,091 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:32:30,562 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:32:30,563 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'In Sikkim, over 1,100 stranded...'
+2025-04-27 15:32:58,367 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 8 messages
+2025-04-27 15:32:58,374 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen?"}, {"role": "assistant", "content": "Yes, I'm here and ready to lis..."}, {"role": "user", "content": "What is the temperature in Kol..."}, {"role": "assistant", "content": "The current temperature in Kol..."}, {"role": "user", "content": "What is the current update on ..."}, {"role": "assistant", "content": "In Sikkim, over 1,100 stranded..."}, {"role": "user", "content": "What is the capital of Nepal?"}]
+2025-04-27 15:32:58,375 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:32:59,391 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:32:59,393 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'The capital of Nepal is Kathma...'
+2025-04-27 15:33:09,921 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:33:09,922 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:33:10,117 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:33:10,498 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:33:47,300 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:33:47,302 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:33:47,469 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:33:47,982 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:33:50,647 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 15:33:50,648 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}]
+2025-04-27 15:33:50,649 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:34:17,986 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:34:17,986 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! How can I assist you to...'
+2025-04-27 15:34:17,988 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:34:17,990 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:34:18,369 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:34:18,527 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:34:22,351 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 15:34:22,352 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, how can I assist you to..."}]
+2025-04-27 15:34:22,353 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: Hello, how can I assist you today?
+2025-04-27 15:34:22,353 - voice_avatar_chatbot.routes.search - INFO - Search request received: Hello, how can I assist you to...
+2025-04-27 15:34:22,356 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: Hello, how can I assist you today?
+2025-04-27 15:34:24,710 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:34:24,711 - voice_avatar_chatbot.routes.chat - INFO - Search completed successfully
+2025-04-27 15:34:24,711 - voice_avatar_chatbot.routes.chat - INFO - Added search results as context to the prompt
+2025-04-27 15:34:24,713 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:34:26,138 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:34:26,139 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! I noticed you're asking...'
+2025-04-27 15:34:54,331 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 15:34:54,332 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, how can I assist you to..."}, {"role": "assistant", "content": "Hello! I noticed you're asking..."}, {"role": "user", "content": "Hello, do you know what is the..."}]
+2025-04-27 15:34:54,333 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: Hello, do you know what is the body count of Adriana Chek? Check.
+2025-04-27 15:34:54,334 - voice_avatar_chatbot.routes.search - INFO - Search request received: Hello, do you know what is the...
+2025-04-27 15:34:54,335 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: Hello, do you know what is the body count of Adriana Chek? Check.
+2025-04-27 15:34:57,172 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:34:57,173 - voice_avatar_chatbot.routes.chat - INFO - Search completed successfully
+2025-04-27 15:34:57,174 - voice_avatar_chatbot.routes.chat - INFO - Added search results as context to the prompt
+2025-04-27 15:34:57,175 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:34:58,228 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:34:58,229 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Adriana Chechik, the adult fil...'
+2025-04-27 15:43:49,273 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 15:43:50,057 - voice_avatar_chatbot.routes - WARNING - Text-to-speech module not available
+2025-04-27 15:43:50,060 - voice_avatar_chatbot.routes - INFO - Speech routes loaded
+2025-04-27 15:43:50,060 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 15:43:50,061 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 15:44:01,932 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:44:01,934 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:44:02,085 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:44:06,682 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 15:44:06,683 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}]
+2025-04-27 15:44:06,685 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:44:07,500 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:44:07,501 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hi there! How can I assist you...'
+2025-04-27 15:44:16,072 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 15:44:16,073 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know what is the wea..."}]
+2025-04-27 15:44:16,073 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: I want to know what is the weather in Bagdogra?
+2025-04-27 15:44:16,074 - voice_avatar_chatbot.routes.search - INFO - Search request received: I want to know what is the wea...
+2025-04-27 15:44:16,075 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: I want to know what is the weather in Bagdogra?
+2025-04-27 15:44:19,911 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:44:19,912 - voice_avatar_chatbot.routes.chat - INFO - Search completed successfully
+2025-04-27 15:44:19,913 - voice_avatar_chatbot.routes.chat - INFO - Added search results as context to the prompt
+2025-04-27 15:44:19,913 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:44:21,182 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:44:21,183 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'The current weather in Bagdogr...'
+2025-04-27 15:44:44,811 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 6 messages
+2025-04-27 15:44:44,812 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know what is the wea..."}, {"role": "assistant", "content": "The current weather in Bagdogr..."}, {"role": "user", "content": "Can you tell me like a joke on..."}]
+2025-04-27 15:44:44,813 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:44:45,769 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:44:45,769 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Sure, here's a light-hearted j...'
+2025-04-27 15:44:59,632 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 8 messages
+2025-04-27 15:44:59,633 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know what is the wea..."}, {"role": "assistant", "content": "The current weather in Bagdogr..."}, {"role": "user", "content": "Can you tell me like a joke on..."}, {"role": "assistant", "content": "Sure, here's a light-hearted j..."}, {"role": "user", "content": "I want to hear a joke on death..."}]
+2025-04-27 15:44:59,634 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:45:01,071 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:45:01,074 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Why did the heavy metal band h...'
+2025-04-27 15:45:14,441 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 10 messages
+2025-04-27 15:45:14,442 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know what is the wea..."}, {"role": "assistant", "content": "The current weather in Bagdogr..."}, {"role": "user", "content": "Can you tell me like a joke on..."}, {"role": "assistant", "content": "Sure, here's a light-hearted j..."}, {"role": "user", "content": "I want to hear a joke on death..."}, {"role": "assistant", "content": "Why did the heavy metal band h..."}, {"role": "user", "content": "I want to know what is the cap..."}]
+2025-04-27 15:45:14,444 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: I want to know what is the capital of Australia?
+2025-04-27 15:45:14,445 - voice_avatar_chatbot.routes.search - INFO - Search request received: I want to know what is the cap...
+2025-04-27 15:45:14,446 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: I want to know what is the capital of Australia?
+2025-04-27 15:45:17,246 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:45:17,246 - voice_avatar_chatbot.routes.chat - INFO - Search completed successfully
+2025-04-27 15:45:17,247 - voice_avatar_chatbot.routes.chat - INFO - Added search results as context to the prompt
+2025-04-27 15:45:17,248 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:45:18,334 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:45:18,336 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'The capital of Australia is Ca...'
+2025-04-27 15:45:40,493 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 12 messages
+2025-04-27 15:45:40,494 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know what is the wea..."}, {"role": "assistant", "content": "The current weather in Bagdogr..."}, {"role": "user", "content": "Can you tell me like a joke on..."}, {"role": "assistant", "content": "Sure, here's a light-hearted j..."}, {"role": "user", "content": "I want to hear a joke on death..."}, {"role": "assistant", "content": "Why did the heavy metal band h..."}, {"role": "user", "content": "I want to know what is the cap..."}, {"role": "assistant", "content": "The capital of Australia is Ca..."}, {"role": "user", "content": "OK, can you create a poem on h..."}]
+2025-04-27 15:45:40,496 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:45:42,728 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:45:42,729 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'In the forest, find your way,
+...'
+2025-04-27 15:45:49,481 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 14 messages
+2025-04-27 15:45:49,488 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I assist you..."}, {"role": "user", "content": "I want to know what is the wea..."}, {"role": "assistant", "content": "The current weather in Bagdogr..."}, {"role": "user", "content": "Can you tell me like a joke on..."}, {"role": "assistant", "content": "Sure, here's a light-hearted j..."}, {"role": "user", "content": "I want to hear a joke on death..."}, {"role": "assistant", "content": "Why did the heavy metal band h..."}, {"role": "user", "content": "I want to know what is the cap..."}, {"role": "assistant", "content": "The capital of Australia is Ca..."}, {"role": "user", "content": "OK, can you create a poem on h..."}, {"role": "assistant", "content": "In the forest, find your way,\n..."}, {"role": "user", "content": "Hello, are you able to listen?"}]
+2025-04-27 15:45:49,490 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:45:51,007 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:45:51,008 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! I'm here to help you. F...'
+2025-04-27 15:49:40,328 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 15:49:41,091 - voice_avatar_chatbot.routes - WARNING - Text-to-speech module not available
+2025-04-27 15:49:41,094 - voice_avatar_chatbot.routes - INFO - Speech routes loaded
+2025-04-27 15:49:41,095 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 15:49:41,095 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 15:49:45,273 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 15:49:45,273 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 15:49:45,664 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 15:49:50,933 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 15:49:50,934 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}]
+2025-04-27 15:49:50,936 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:49:51,695 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:49:51,696 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! How can I assist you to...'
+2025-04-27 15:50:00,426 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 15:50:00,427 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hello! How can I assist you to..."}, {"role": "user", "content": "What is the temperature in New..."}]
+2025-04-27 15:50:00,428 - voice_avatar_chatbot.routes.chat - INFO - Detected real-time query: What is the temperature in New York?
+2025-04-27 15:50:00,429 - voice_avatar_chatbot.routes.search - INFO - Search request received: What is the temperature in New...
+2025-04-27 15:50:00,430 - voice_avatar_chatbot.routes.search - DEBUG - Calling Tavily search API with query: What is the temperature in New York?
+2025-04-27 15:50:03,306 - voice_avatar_chatbot.routes.search - INFO - Search successful with 5 results
+2025-04-27 15:50:03,307 - voice_avatar_chatbot.routes.chat - INFO - Search completed successfully
+2025-04-27 15:50:03,308 - voice_avatar_chatbot.routes.chat - INFO - Added search results as context to the prompt
+2025-04-27 15:50:03,309 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:50:04,178 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:50:04,179 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Currently, the temperature in ...'
+2025-04-27 15:50:15,439 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 6 messages
+2025-04-27 15:50:15,441 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hello! How can I assist you to..."}, {"role": "user", "content": "What is the temperature in New..."}, {"role": "assistant", "content": "Currently, the temperature in ..."}, {"role": "user", "content": "What are the three laws of New..."}]
+2025-04-27 15:50:15,443 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:50:16,861 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:50:16,862 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Sir Isaac Newton's three laws ...'
+2025-04-27 15:50:54,582 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 8 messages
+2025-04-27 15:50:54,583 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hello! How can I assist you to..."}, {"role": "user", "content": "What is the temperature in New..."}, {"role": "assistant", "content": "Currently, the temperature in ..."}, {"role": "user", "content": "What are the three laws of New..."}, {"role": "assistant", "content": "Sir Isaac Newton's three laws ..."}, {"role": "user", "content": "The most popular tourist desti..."}]
+2025-04-27 15:50:54,583 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:50:55,626 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:50:55,627 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'One of the most popular touris...'
+2025-04-27 15:51:17,702 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 10 messages
+2025-04-27 15:51:17,704 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hello! How can I assist you to..."}, {"role": "user", "content": "What is the temperature in New..."}, {"role": "assistant", "content": "Currently, the temperature in ..."}, {"role": "user", "content": "What are the three laws of New..."}, {"role": "assistant", "content": "Sir Isaac Newton's three laws ..."}, {"role": "user", "content": "The most popular tourist desti..."}, {"role": "assistant", "content": "One of the most popular touris..."}, {"role": "user", "content": "What are the cafes that I can ..."}]
+2025-04-27 15:51:17,706 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:51:19,064 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:51:19,065 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'When in Darjeeling, you can vi...'
+2025-04-27 15:51:38,185 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 12 messages
+2025-04-27 15:51:38,187 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hello! How can I assist you to..."}, {"role": "user", "content": "What is the temperature in New..."}, {"role": "assistant", "content": "Currently, the temperature in ..."}, {"role": "user", "content": "What are the three laws of New..."}, {"role": "assistant", "content": "Sir Isaac Newton's three laws ..."}, {"role": "user", "content": "The most popular tourist desti..."}, {"role": "assistant", "content": "One of the most popular touris..."}, {"role": "user", "content": "What are the cafes that I can ..."}, {"role": "assistant", "content": "When in Darjeeling, you can vi..."}, {"role": "user", "content": "Can you list down some of the ..."}]
+2025-04-27 15:51:38,188 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 15:51:41,125 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 15:51:41,126 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'For a 3-day stay in Darjeeling...'

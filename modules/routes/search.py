@@ -1,83 +1,114 @@
-# modules/routes/search.py
-
 """
-Search route handler with external API integration
+Search route handler with Tavily API integration through LangChain
 """
 
 import json
 import traceback
-import requests
+import asyncio
+from concurrent.futures import ThreadPoolExecutor
 from fastapi import APIRouter, HTTPException, Body
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, Dict, Any
 from modules.logger import get_logger
-from modules.config import get_serper_api_key  # You'll need to add this to your config
+from modules.config import get_env_variable
+
+# Import LangChain's Tavily tool
+from langchain_community.tools.tavily_search import TavilySearchResults
 
 # Setup API Router
 router = APIRouter()
 logger = get_logger("routes.search")
 
+# Simple in-memory cache to avoid repeated identical searches
+# Format: {query: {timestamp: timestamp, results: results}}
+SEARCH_CACHE = {}
+CACHE_TTL = 300  # Cache results for 5 minutes (300 seconds)
+
 class SearchRequest(BaseModel):
     query: str
-    type: Optional[str] = "search"  # search, news, places, images
+    search_depth: Optional[str] = "basic"  # basic or advanced
 
-@router.post("/api/search")
-async def search(request: SearchRequest = Body(...)):
+async def search(request: SearchRequest):
     """
-    Perform a real-time search using Serper API (Google Search API)
+    Functional implementation of search logic that can be called directly
+    or via the HTTP endpoint
     """
     try:
-        logger.info(f"Search request received: {request.query[:30]}...")
+        query = request.query
+        logger.info(f"Search request received: {query[:30]}...")
         
-        # Get Serper API key (you'll need to set this up)
-        api_key = get_serper_api_key()
-        if not api_key:
-            logger.error("Serper API key not found")
+        # Check cache first
+        import time
+        current_time = time.time()
+        
+        if query in SEARCH_CACHE:
+            cache_entry = SEARCH_CACHE[query]
+            # If cache is still valid (not expired)
+            if current_time - cache_entry["timestamp"] < CACHE_TTL:
+                logger.info(f"Using cached search results for query: {query[:30]}...")
+                return cache_entry["results"]
+        
+        # Make sure Tavily API key is defined in environment variables
+        # The TavilySearchResults class reads from TAVILY_API_KEY env var automatically
+        tavily_api_key = get_env_variable("TAVILY_API_KEY")
+        if not tavily_api_key:
+            logger.error("Tavily API key not found")
             raise HTTPException(
                 status_code=500,
-                detail="Search API key not configured. Please set the SERPER_API_KEY environment variable."
+                detail="Tavily API key not configured. Please set the TAVILY_API_KEY environment variable."
             )
 
-        # Call Serper API (Google Search API)
-        headers = {
-            "X-API-KEY": api_key,
-            "Content-Type": "application/json"
-        }
-        
-        payload = {
-            "q": request.query,
-            "gl": "us",  # Geolocation (us, uk, etc)
-            "hl": "en",  # Language
-            "num": 5     # Number of results
-        }
-        
-        search_type = request.type.lower()
-        if search_type == "news":
-            endpoint = "https://api.serper.dev/news"
-        elif search_type == "places":
-            endpoint = "https://api.serper.dev/places"
-        elif search_type == "images":
-            endpoint = "https://api.serper.dev/images"
-        else:
-            endpoint = "https://api.serper.dev/search"
-        
-        logger.debug(f"Calling search API: {endpoint}")
-        response = requests.post(
-            endpoint,
-            headers=headers,
-            json=payload,
-            timeout=10
+        # Initialize Tavily search tool
+        search_tool = TavilySearchResults(
+            search_depth=request.search_depth,  # "basic" or "advanced"
+            k=5  # Number of results to return
         )
         
-        if response.status_code == 200:
-            result = response.json()
-            logger.info(f"Search successful with {len(result.get('organic', []))} results")
-            return result
-        else:
-            logger.error(f"Search API error: {response.status_code} - {response.text}")
+        logger.debug(f"Calling Tavily search API with query: {query}")
+        
+        # Execute the search in a separate thread to avoid blocking
+        try:
+            # Run the blocking search in a thread pool
+            with ThreadPoolExecutor() as executor:
+                results = await asyncio.get_event_loop().run_in_executor(
+                    executor, 
+                    search_tool.invoke,
+                    query
+                )
+                
+            logger.info(f"Search successful with {len(results)} results")
+            
+            # Format the response to match your frontend expectations
+            formatted_results = {
+                "organic": [],
+                "query": query,
+                "searchDepth": request.search_depth
+            }
+            
+            for item in results:
+                formatted_results["organic"].append({
+                    "title": item.get("title", ""),
+                    "link": item.get("url", ""),
+                    "snippet": item.get("content", ""),
+                    "source": item.get("source", "Tavily")
+                })
+            
+            # Cache the results for future use
+            SEARCH_CACHE[query] = {
+                "timestamp": current_time,
+                "results": formatted_results
+            }
+            
+            # Cleanup old cache entries
+            cleanup_cache(current_time)
+                
+            return formatted_results
+            
+        except Exception as e:
+            logger.error(f"Tavily search error: {str(e)}")
             raise HTTPException(
-                status_code=response.status_code,
-                detail=f"Search API error: {response.text}"
+                status_code=500,
+                detail=f"Tavily search error: {str(e)}"
             )
             
     except HTTPException:
@@ -87,3 +118,23 @@ async def search(request: SearchRequest = Body(...)):
         logger.error(error_msg)
         logger.error(f"Traceback: {traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=error_msg)
+
+def cleanup_cache(current_time):
+    """Remove expired entries from cache"""
+    global SEARCH_CACHE
+    keys_to_remove = []
+    
+    for key, cache_entry in SEARCH_CACHE.items():
+        if current_time - cache_entry["timestamp"] > CACHE_TTL:
+            keys_to_remove.append(key)
+    
+    for key in keys_to_remove:
+        del SEARCH_CACHE[key]
+
+@router.post("/api/search")
+async def search_endpoint(request: SearchRequest = Body(...)):
+    """
+    HTTP endpoint for the search functionality
+    This now just wraps the functional implementation
+    """
+    return await search(request)
