@@ -1,0 +1,474 @@
+2025-04-27 10:33:47,304 - voice_avatar_chatbot - INFO - Environment variables loaded successfully
+2025-04-27 10:33:47,304 - voice_avatar_chatbot - ERROR - Missing ELEVENLABS_API_KEY in environment variables
+2025-04-27 10:33:47,304 - voice_avatar_chatbot - ERROR - Error setting up environment: Missing ELEVENLABS_API_KEY. Please check your .env file.
+2025-04-27 10:34:17,268 - voice_avatar_chatbot - INFO - Environment variables loaded successfully
+2025-04-27 10:34:17,268 - voice_avatar_chatbot - INFO - API keys loaded successfully
+2025-04-27 10:34:17,272 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 10:35:41,127 - voice_avatar_chatbot - INFO - Environment variables loaded successfully
+2025-04-27 10:35:41,128 - voice_avatar_chatbot - INFO - API keys loaded successfully
+2025-04-27 10:35:41,130 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 10:35:48,790 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730348.7905726 started: GET /
+2025-04-27 10:35:48,791 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 10:35:48,792 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 10:35:48,793 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730348.7905726 completed with status code: 200
+2025-04-27 10:35:49,543 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730349.5430028 started: GET /favicon.ico
+2025-04-27 10:35:49,543 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730349.5430028 completed with status code: 404
+2025-04-27 10:36:23,794 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730383.7948205 started: GET /
+2025-04-27 10:36:23,796 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 10:36:23,797 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 10:36:23,800 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730383.7948205 completed with status code: 200
+2025-04-27 10:36:23,843 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730383.8433385 started: GET /favicon.ico
+2025-04-27 10:36:23,844 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730383.8433385 completed with status code: 404
+2025-04-27 10:40:41,188 - voice_avatar_chatbot - INFO - Environment variables loaded successfully
+2025-04-27 10:40:41,188 - voice_avatar_chatbot - INFO - API keys loaded successfully
+2025-04-27 10:40:41,192 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 10:40:45,710 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730645.709767 started: GET /
+2025-04-27 10:40:45,710 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 10:40:45,710 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 10:40:45,711 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730645.709767 completed with status code: 200
+2025-04-27 10:41:08,027 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730668.0270312 started: POST /api/speech-to-text
+2025-04-27 10:41:08,038 - voice_avatar_chatbot.routes.speech - INFO - Speech-to-text request received - file: blob, content_type: audio/wav
+2025-04-27 10:41:08,041 - voice_avatar_chatbot.routes.speech - DEBUG - Audio file read, size: 77163 bytes
+2025-04-27 10:41:08,042 - voice_avatar_chatbot.routes.speech - DEBUG - Sending request to OpenAI Whisper API
+2025-04-27 10:41:10,267 - voice_avatar_chatbot.routes.speech - DEBUG - Whisper API response status: 200
+2025-04-27 10:41:10,361 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730668.0270312 completed with status code: 200
+2025-04-27 10:41:10,366 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730670.3661869 started: POST /api/generate-text
+2025-04-27 10:41:10,369 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 10:41:10,370 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly AI..."}, {"role": "user", "content": "\u06c1\u0627\u06ba \u06c1\u0644\u0648 \u0622\u0626\u06cc\u0648 \u0627\u06cc\u06a9 \u0648\u06cc\u0688\u06cc\u0648 \u0688\u0627\u0644\u06cc\u0633\u0646"}]
+2025-04-27 10:41:10,373 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 10:41:22,682 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 10:41:22,742 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730670.3661869 completed with status code: 200
+2025-04-27 10:41:22,785 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730682.7846675 started: POST /api/text-to-speech
+2025-04-27 10:41:22,802 - voice_avatar_chatbot.routes.tts - DEBUG - Sending request to ElevenLabs API
+2025-04-27 10:41:25,351 - voice_avatar_chatbot.routes.tts - DEBUG - ElevenLabs API response status: 200
+2025-04-27 10:41:25,352 - voice_avatar_chatbot.routes.tts - INFO - Successfully generated speech, content length: 341517 bytes
+2025-04-27 10:41:25,353 - voice_avatar_chatbot.routes.main - INFO - Request req-1745730682.7846675 completed with status code: 200
+2025-04-27 10:45:43,209 - voice_avatar_chatbot - INFO - Environment variables loaded successfully
+2025-04-27 10:45:43,209 - voice_avatar_chatbot - INFO - API keys loaded successfully
+2025-04-27 10:45:43,211 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 10:46:43,092 - voice_avatar_chatbot - INFO - Environment variables loaded successfully
+2025-04-27 10:46:43,093 - voice_avatar_chatbot - INFO - API keys loaded successfully
+2025-04-27 10:46:43,096 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 10:46:59,432 - voice_avatar_chatbot - INFO - Environment variables loaded successfully
+2025-04-27 10:46:59,433 - voice_avatar_chatbot - INFO - API keys loaded successfully
+2025-04-27 10:46:59,438 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 10:47:04,284 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731024.284638 started: GET /
+2025-04-27 10:47:04,285 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 10:47:04,286 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 10:47:04,287 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731024.284638 completed with status code: 200
+2025-04-27 10:47:11,729 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731031.7296941 started: POST /api/speech-to-text
+2025-04-27 10:47:11,737 - voice_avatar_chatbot.routes.speech - INFO - Speech-to-text request received - file: blob, content_type: audio/wav
+2025-04-27 10:47:11,740 - voice_avatar_chatbot.routes.speech - DEBUG - Audio file read, size: 60648 bytes
+2025-04-27 10:47:11,741 - voice_avatar_chatbot.routes.speech - DEBUG - Sending request to OpenAI Whisper API
+2025-04-27 10:47:14,587 - voice_avatar_chatbot.routes.speech - DEBUG - Whisper API response status: 200
+2025-04-27 10:47:14,588 - voice_avatar_chatbot.routes.speech - INFO - Successfully transcribed audio: 'Hello? Are you able to listen ...'
+2025-04-27 10:47:14,590 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731031.7296941 completed with status code: 200
+2025-04-27 10:47:14,599 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731034.5980139 started: POST /api/generate-text
+2025-04-27 10:47:14,602 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 10:47:14,603 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly AI..."}, {"role": "user", "content": "Hello? Are you able to listen ..."}]
+2025-04-27 10:47:14,605 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 10:47:16,478 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 10:47:16,479 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! Yes, I'm here to listen...'
+2025-04-27 10:47:16,481 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731034.5980139 completed with status code: 200
+2025-04-27 10:47:16,486 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731036.4862952 started: POST /api/text-to-speech
+2025-04-27 10:47:16,488 - voice_avatar_chatbot.routes.tts - INFO - Text-to-speech request received - text: 'Hello! Yes, I'm here to listen...', voice_id: 21m00Tcm4TlvDq8ikWAM
+2025-04-27 10:47:16,489 - voice_avatar_chatbot.routes.tts - DEBUG - Sending request to ElevenLabs API
+2025-04-27 10:47:19,986 - voice_avatar_chatbot.routes.tts - DEBUG - ElevenLabs API response status: 200
+2025-04-27 10:47:19,987 - voice_avatar_chatbot.routes.tts - INFO - Successfully generated speech, content length: 51871 bytes
+2025-04-27 10:47:19,989 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731036.4862952 completed with status code: 200
+2025-04-27 10:47:47,327 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731067.3273857 started: POST /api/speech-to-text
+2025-04-27 10:47:47,333 - voice_avatar_chatbot.routes.speech - INFO - Speech-to-text request received - file: blob, content_type: audio/wav
+2025-04-27 10:47:47,336 - voice_avatar_chatbot.routes.speech - DEBUG - Audio file read, size: 43994 bytes
+2025-04-27 10:47:47,339 - voice_avatar_chatbot.routes.speech - DEBUG - Sending request to OpenAI Whisper API
+2025-04-27 10:47:49,355 - voice_avatar_chatbot.routes.speech - DEBUG - Whisper API response status: 200
+2025-04-27 10:47:49,383 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731067.3273857 completed with status code: 200
+2025-04-27 10:47:49,388 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731069.3889937 started: POST /api/generate-text
+2025-04-27 10:47:49,390 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 10:47:49,391 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly AI..."}, {"role": "user", "content": "\u0935\u0926\u0930 \u0907\u0928 \u0926\u0947\u0932\u0940 \u0915\u094d\u092f\u093e \u0939\u0948?"}]
+2025-04-27 10:47:49,391 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 10:47:51,937 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 10:47:51,938 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'It seems like you're asking ab...'
+2025-04-27 10:47:51,940 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731069.3889937 completed with status code: 200
+2025-04-27 10:47:51,947 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731071.9470718 started: POST /api/text-to-speech
+2025-04-27 10:47:51,948 - voice_avatar_chatbot.routes.tts - INFO - Text-to-speech request received - text: 'It seems like you're asking ab...', voice_id: 21m00Tcm4TlvDq8ikWAM
+2025-04-27 10:47:51,950 - voice_avatar_chatbot.routes.tts - DEBUG - Sending request to ElevenLabs API
+2025-04-27 10:48:00,184 - voice_avatar_chatbot.routes.tts - DEBUG - ElevenLabs API response status: 200
+2025-04-27 10:48:00,185 - voice_avatar_chatbot.routes.tts - INFO - Successfully generated speech, content length: 278405 bytes
+2025-04-27 10:48:00,187 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731071.9470718 completed with status code: 200
+2025-04-27 10:55:51,994 - voice_avatar_chatbot - INFO - Environment variables loaded successfully
+2025-04-27 10:55:51,995 - voice_avatar_chatbot - INFO - API keys loaded successfully
+2025-04-27 10:55:51,997 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 10:56:18,012 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 10:56:18,013 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 10:56:18,015 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 10:56:58,683 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 10:56:58,683 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 10:56:58,685 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 10:57:04,359 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731624.3597107 started: GET /
+2025-04-27 10:57:04,360 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 10:57:04,360 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 10:57:04,362 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731624.3597107 completed with status code: 200
+2025-04-27 10:57:18,721 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731638.720871 started: POST /api/speech-to-text
+2025-04-27 10:57:18,729 - voice_avatar_chatbot.routes.speech - INFO - Speech-to-text request received - file: blob, content_type: audio/wav
+2025-04-27 10:57:18,730 - voice_avatar_chatbot.routes.speech - DEBUG - Audio file read, size: 69452 bytes
+2025-04-27 10:57:18,731 - voice_avatar_chatbot.routes.speech - DEBUG - Sending request to OpenAI Whisper API
+2025-04-27 10:57:22,269 - voice_avatar_chatbot.routes.speech - DEBUG - Whisper API response status: 200
+2025-04-27 10:57:22,303 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731638.720871 completed with status code: 200
+2025-04-27 10:57:22,309 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731642.3093863 started: POST /api/generate-text
+2025-04-27 10:57:22,312 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 10:57:22,313 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly AI..."}, {"role": "user", "content": "\u0645\u0631\u062d\u0628\u0627! \u0622\u067e \u0633\u0648\u0686 \u0633\u06a9\u062a\u06d2 \u06c1\u06cc\u06ba\u061f"}]
+2025-04-27 10:57:22,313 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 10:57:24,896 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 10:57:24,896 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! Yes, I can process info...'
+2025-04-27 10:57:24,898 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731642.3093863 completed with status code: 200
+2025-04-27 10:57:24,907 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731644.907436 started: POST /api/text-to-speech
+2025-04-27 10:57:24,910 - voice_avatar_chatbot.routes.tts - INFO - Text-to-speech request received - text: 'Hello! Yes, I can process info...', voice_id: 21m00Tcm4TlvDq8ikWAM
+2025-04-27 10:57:24,911 - voice_avatar_chatbot.routes.tts - DEBUG - Sending request to ElevenLabs API
+2025-04-27 10:57:33,595 - voice_avatar_chatbot.routes.tts - DEBUG - ElevenLabs API response status: 200
+2025-04-27 10:57:33,596 - voice_avatar_chatbot.routes.tts - INFO - Successfully generated speech, content length: 104534 bytes
+2025-04-27 10:57:33,597 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731644.907436 completed with status code: 200
+2025-04-27 10:57:56,560 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731676.5608616 started: POST /api/speech-to-text
+2025-04-27 10:57:56,572 - voice_avatar_chatbot.routes.speech - INFO - Speech-to-text request received - file: blob, content_type: audio/wav
+2025-04-27 10:57:56,575 - voice_avatar_chatbot.routes.speech - DEBUG - Audio file read, size: 126712 bytes
+2025-04-27 10:57:56,576 - voice_avatar_chatbot.routes.speech - DEBUG - Sending request to OpenAI Whisper API
+2025-04-27 10:57:58,965 - voice_avatar_chatbot.routes.speech - DEBUG - Whisper API response status: 200
+2025-04-27 10:57:58,966 - voice_avatar_chatbot.routes.speech - INFO - Successfully transcribed audio: 'What do you know about life an...'
+2025-04-27 10:57:58,967 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731676.5608616 completed with status code: 200
+2025-04-27 10:57:58,972 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731678.9725735 started: POST /api/generate-text
+2025-04-27 10:57:58,975 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 10:57:58,976 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly AI..."}, {"role": "user", "content": "\u0645\u0631\u062d\u0628\u0627! \u0622\u067e \u0633\u0648\u0686 \u0633\u06a9\u062a\u06d2 \u06c1\u06cc\u06ba\u061f"}, {"role": "assistant", "content": "Hello! Yes, I can process info..."}, {"role": "user", "content": "What do you know about life an..."}]
+2025-04-27 10:57:58,977 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 10:58:10,830 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 10:58:10,831 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Life, in its broadest sense, i...'
+2025-04-27 10:58:10,832 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731678.9725735 completed with status code: 200
+2025-04-27 10:58:10,839 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731690.839984 started: POST /api/text-to-speech
+2025-04-27 10:58:10,842 - voice_avatar_chatbot.routes.tts - INFO - Text-to-speech request received - text: 'Life, in its broadest sense, i...', voice_id: 21m00Tcm4TlvDq8ikWAM
+2025-04-27 10:58:10,843 - voice_avatar_chatbot.routes.tts - DEBUG - Sending request to ElevenLabs API
+2025-04-27 10:58:25,799 - voice_avatar_chatbot.routes.tts - DEBUG - ElevenLabs API response status: 200
+2025-04-27 10:58:25,800 - voice_avatar_chatbot.routes.tts - INFO - Successfully generated speech, content length: 2956270 bytes
+2025-04-27 10:58:25,802 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731690.839984 completed with status code: 200
+2025-04-27 11:00:05,944 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731805.9444103 started: POST /api/speech-to-text
+2025-04-27 11:00:05,955 - voice_avatar_chatbot.routes.speech - INFO - Speech-to-text request received - file: blob, content_type: audio/wav
+2025-04-27 11:00:05,957 - voice_avatar_chatbot.routes.speech - DEBUG - Audio file read, size: 33453 bytes
+2025-04-27 11:00:05,958 - voice_avatar_chatbot.routes.speech - DEBUG - Sending request to OpenAI Whisper API
+2025-04-27 11:00:09,332 - voice_avatar_chatbot.routes.speech - DEBUG - Whisper API response status: 200
+2025-04-27 11:00:09,333 - voice_avatar_chatbot.routes.speech - INFO - Successfully transcribed audio: 'Bye....'
+2025-04-27 11:00:09,335 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731805.9444103 completed with status code: 200
+2025-04-27 11:00:09,339 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731809.3399923 started: POST /api/generate-text
+2025-04-27 11:00:09,341 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 6 messages
+2025-04-27 11:00:09,342 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly AI..."}, {"role": "user", "content": "\u0645\u0631\u062d\u0628\u0627! \u0622\u067e \u0633\u0648\u0686 \u0633\u06a9\u062a\u06d2 \u06c1\u06cc\u06ba\u061f"}, {"role": "assistant", "content": "Hello! Yes, I can process info..."}, {"role": "user", "content": "What do you know about life an..."}, {"role": "assistant", "content": "Life, in its broadest sense, i..."}, {"role": "user", "content": "Bye."}]
+2025-04-27 11:00:09,343 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 11:00:11,939 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 11:00:11,940 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Goodbye! If you have more ques...'
+2025-04-27 11:00:11,943 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731809.3399923 completed with status code: 200
+2025-04-27 11:00:11,950 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731811.950901 started: POST /api/text-to-speech
+2025-04-27 11:00:11,952 - voice_avatar_chatbot.routes.tts - INFO - Text-to-speech request received - text: 'Goodbye! If you have more ques...', voice_id: 21m00Tcm4TlvDq8ikWAM
+2025-04-27 11:00:11,954 - voice_avatar_chatbot.routes.tts - DEBUG - Sending request to ElevenLabs API
+2025-04-27 11:00:17,288 - voice_avatar_chatbot.routes.tts - DEBUG - ElevenLabs API response status: 200
+2025-04-27 11:00:17,289 - voice_avatar_chatbot.routes.tts - INFO - Successfully generated speech, content length: 74023 bytes
+2025-04-27 11:00:17,291 - voice_avatar_chatbot.routes.main - INFO - Request req-1745731811.950901 completed with status code: 200
+2025-04-27 11:25:55,270 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:25:55,271 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:25:55,274 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:26:00,067 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.0674055 started: GET /
+2025-04-27 11:26:00,068 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:26:00,068 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:26:00,069 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.0674055 completed with status code: 200
+2025-04-27 11:26:00,076 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.0764031 started: GET /static/js/app.js
+2025-04-27 11:26:00,077 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.0774043 started: GET /static/css/main.css
+2025-04-27 11:26:00,113 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.0764031 completed with status code: 200
+2025-04-27 11:26:00,114 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.0774043 completed with status code: 200
+2025-04-27 11:26:00,118 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.1189198 started: GET /static/js/audioProcessor.js
+2025-04-27 11:26:00,119 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.1199188 started: GET /static/js/avatarController.js
+2025-04-27 11:26:00,120 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.1209192 started: GET /static/js/apiClient.js
+2025-04-27 11:26:00,121 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.1189198 completed with status code: 200
+2025-04-27 11:26:00,122 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.1199188 completed with status code: 200
+2025-04-27 11:26:00,123 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733360.1209192 completed with status code: 200
+2025-04-27 11:31:19,653 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:31:19,653 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:31:19,656 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:31:25,212 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733685.2128773 started: GET /
+2025-04-27 11:31:25,213 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:31:25,214 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:31:25,225 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733685.2128773 completed with status code: 200
+2025-04-27 11:31:25,233 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733685.2338803 started: GET /static/js/app.js
+2025-04-27 11:31:25,322 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733685.2338803 completed with status code: 200
+2025-04-27 11:31:25,329 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733685.3293939 started: GET /static/js/audioProcessor.js
+2025-04-27 11:31:25,333 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733685.3293939 completed with status code: 200
+2025-04-27 11:31:26,814 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733686.8140438 started: GET /
+2025-04-27 11:31:26,815 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:31:26,816 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:31:26,817 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733686.8140438 completed with status code: 200
+2025-04-27 11:31:26,824 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733686.8240457 started: GET /static/js/app.js
+2025-04-27 11:31:26,828 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733686.8240457 completed with status code: 304
+2025-04-27 11:32:58,810 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.810995 started: GET /
+2025-04-27 11:32:58,812 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:32:58,813 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:32:58,815 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.810995 completed with status code: 200
+2025-04-27 11:32:58,823 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.8239968 started: GET /static/css/main.css
+2025-04-27 11:32:58,825 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.825061 started: GET /static/js/app.js
+2025-04-27 11:32:58,829 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.8239968 completed with status code: 200
+2025-04-27 11:32:58,830 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.825061 completed with status code: 200
+2025-04-27 11:32:58,842 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.841059 started: GET /static/js/audioProcessor.js
+2025-04-27 11:32:58,843 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.8430586 started: GET /static/js/avatarController.js
+2025-04-27 11:32:58,847 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.8460646 started: GET /static/js/apiClient.js
+2025-04-27 11:32:58,857 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.841059 completed with status code: 304
+2025-04-27 11:32:58,858 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.8430586 completed with status code: 200
+2025-04-27 11:32:58,860 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733778.8460646 completed with status code: 304
+2025-04-27 11:34:44,189 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733884.1892416 started: GET /
+2025-04-27 11:34:44,191 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:34:44,192 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:34:44,194 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733884.1892416 completed with status code: 200
+2025-04-27 11:34:44,202 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733884.2022452 started: GET /static/css/main.css
+2025-04-27 11:34:44,204 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733884.204241 started: GET /static/js/app.js
+2025-04-27 11:34:44,210 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733884.2022452 completed with status code: 304
+2025-04-27 11:34:44,213 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733884.204241 completed with status code: 304
+2025-04-27 11:34:44,217 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733884.2172406 started: GET /static/js/audioProcessor.js
+2025-04-27 11:34:44,219 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733884.219248 started: GET /static/js/avatarController.js
+2025-04-27 11:34:44,221 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733884.2172406 completed with status code: 304
+2025-04-27 11:34:44,222 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733884.219248 completed with status code: 304
+2025-04-27 11:34:45,897 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733885.8979156 started: GET /
+2025-04-27 11:34:45,898 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:34:45,899 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:34:45,901 - voice_avatar_chatbot.routes.main - INFO - Request req-1745733885.8979156 completed with status code: 200
+2025-04-27 11:36:26,291 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:36:26,291 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:36:26,294 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:36:40,085 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734000.0853093 started: GET /
+2025-04-27 11:36:40,087 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:36:40,087 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:36:40,088 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734000.0853093 completed with status code: 200
+2025-04-27 11:36:40,100 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734000.1003153 started: GET /static/css/main.css
+2025-04-27 11:36:40,102 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734000.1023135 started: GET /static/js/app.js
+2025-04-27 11:36:40,188 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734000.1003153 completed with status code: 304
+2025-04-27 11:36:40,190 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734000.1023135 completed with status code: 304
+2025-04-27 11:36:40,215 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734000.2158778 started: GET /static/js/audioProcessor.js
+2025-04-27 11:36:40,217 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734000.2178783 started: GET /static/js/avatarController.js
+2025-04-27 11:36:40,222 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734000.2178783 completed with status code: 304
+2025-04-27 11:36:40,225 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734000.2158778 completed with status code: 304
+2025-04-27 11:37:37,358 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:37:37,358 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:37:37,361 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:37:41,460 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.4606626 started: GET /
+2025-04-27 11:37:41,461 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:37:41,461 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:37:41,463 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.4606626 completed with status code: 200
+2025-04-27 11:37:41,475 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.4746659 started: GET /static/css/main.css
+2025-04-27 11:37:41,475 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.475665 started: GET /static/js/app.js
+2025-04-27 11:37:41,476 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.476665 started: GET /static/js/audioProcessor.js
+2025-04-27 11:37:41,480 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.4796648 started: GET /static/js/apiClient.js
+2025-04-27 11:37:41,480 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.4806654 started: GET /static/js/avatarController.js
+2025-04-27 11:37:41,521 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.4796648 completed with status code: 200
+2025-04-27 11:37:41,522 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.4746659 completed with status code: 200
+2025-04-27 11:37:41,523 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.475665 completed with status code: 200
+2025-04-27 11:37:41,524 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.476665 completed with status code: 200
+2025-04-27 11:37:41,524 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.4806654 completed with status code: 200
+2025-04-27 11:37:41,532 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.5321898 started: GET /static/js/audioProcessor.js
+2025-04-27 11:37:41,534 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.534189 started: GET /static/js/app.js
+2025-04-27 11:37:41,534 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.534189 started: GET /static/js/avatarController.js
+2025-04-27 11:37:41,537 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.534189 completed with status code: 304
+2025-04-27 11:37:41,537 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.534189 completed with status code: 304
+2025-04-27 11:37:41,538 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734061.5321898 completed with status code: 304
+2025-04-27 11:40:21,030 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734221.0300019 started: GET /static/css/main.css
+2025-04-27 11:40:21,035 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734221.0300019 completed with status code: 304
+2025-04-27 11:41:46,049 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:41:46,050 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:41:46,052 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:41:51,208 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.208193 started: GET /
+2025-04-27 11:41:51,210 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:41:51,210 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:41:51,211 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.208193 completed with status code: 200
+2025-04-27 11:41:51,221 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.221192 started: GET /static/css/main.css
+2025-04-27 11:41:51,224 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.2241917 started: GET /static/js/app.js
+2025-04-27 11:41:51,226 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.2261918 started: GET /static/js/audioProcessor.js
+2025-04-27 11:41:51,227 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.2271912 started: GET /static/js/avatarController.js
+2025-04-27 11:41:51,303 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.221192 completed with status code: 304
+2025-04-27 11:41:51,307 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.2261918 completed with status code: 304
+2025-04-27 11:41:51,309 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.2271912 completed with status code: 304
+2025-04-27 11:41:51,310 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.2241917 completed with status code: 304
+2025-04-27 11:41:51,315 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.315504 started: GET /static/js/app.js
+2025-04-27 11:41:51,318 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.3175216 started: GET /static/js/avatarController.js
+2025-04-27 11:41:51,319 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.3195357 started: GET /static/js/apiClient.js
+2025-04-27 11:41:51,320 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.3205547 started: GET /static/js/audioProcessor.js
+2025-04-27 11:41:51,326 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.3175216 completed with status code: 304
+2025-04-27 11:41:51,328 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.315504 completed with status code: 304
+2025-04-27 11:41:51,330 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.3205547 completed with status code: 304
+2025-04-27 11:41:51,331 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.3195357 completed with status code: 200
+2025-04-27 11:41:51,349 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.3496077 started: GET /api/test
+2025-04-27 11:41:51,351 - voice_avatar_chatbot.routes.main - INFO - Test endpoint accessed
+2025-04-27 11:41:51,352 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.3496077 completed with status code: 200
+2025-04-27 11:41:51,356 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.356606 started: GET /api/test
+2025-04-27 11:41:51,357 - voice_avatar_chatbot.routes.main - INFO - Test endpoint accessed
+2025-04-27 11:41:51,359 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734311.356606 completed with status code: 200
+2025-04-27 11:41:56,343 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734316.3439178 started: POST /api/chat
+2025-04-27 11:41:56,346 - voice_avatar_chatbot.routes.main - INFO - Request req-1745734316.3439178 completed with status code: 404
+2025-04-27 11:45:20,180 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:45:20,181 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:45:20,183 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:46:00,635 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:46:00,636 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:46:00,639 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:47:40,695 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:47:40,696 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:48:20,441 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:48:20,442 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:48:31,228 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:48:31,228 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:48:31,231 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:48:46,468 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:48:46,469 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:48:46,470 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:49:04,092 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:49:04,092 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:51:24,233 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:51:24,234 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:51:24,235 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:51:29,304 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:51:29,305 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:52:16,248 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:52:16,248 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:52:16,250 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:52:20,940 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:52:20,940 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:54:48,265 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:54:48,266 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:54:48,268 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:55:01,237 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:55:01,238 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:55:01,240 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:55:04,673 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:55:04,673 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:55:34,249 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:55:34,250 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:55:36,895 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:55:36,896 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:57:37,763 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:57:37,764 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:57:37,766 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:57:41,873 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:57:41,873 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 11:59:26,738 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:59:26,739 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:59:26,741 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:59:33,815 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 11:59:33,816 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 11:59:33,818 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 11:59:37,319 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 11:59:37,320 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 12:00:57,271 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:00:57,272 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 12:00:57,273 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:01:00,337 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 12:01:00,338 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 12:06:30,371 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:06:30,373 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 12:06:30,376 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:07:02,644 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:07:02,645 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 12:07:02,647 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:08:41,145 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:08:41,146 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 12:08:41,149 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 12:08:41,149 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:08:46,576 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:08:46,576 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 12:08:46,578 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 12:08:46,578 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:08:51,524 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 12:08:51,524 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 12:08:51,615 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 12:08:51,618 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 12:08:54,852 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 12:08:54,854 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}]
+2025-04-27 12:08:54,855 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 12:08:56,375 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 12:08:56,376 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! How can I help you toda...'
+2025-04-27 12:09:35,423 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 12:09:35,425 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 12:09:35,463 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 12:09:35,468 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 12:09:38,760 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 12:09:38,762 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello I want to talk."}]
+2025-04-27 12:09:38,763 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 12:09:39,832 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 12:09:39,833 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! I'm here for you. What'...'
+2025-04-27 12:15:14,019 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:15:14,019 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 12:15:14,021 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 12:15:14,021 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:15:17,529 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 12:15:17,529 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 12:15:17,903 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 12:15:18,573 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 12:15:35,777 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 12:15:35,778 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen?"}]
+2025-04-27 12:15:35,779 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 12:15:37,117 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 12:15:37,118 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! I can't listen in the w...'
+2025-04-27 12:15:58,902 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 12:15:58,903 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen?"}, {"role": "assistant", "content": "Hello! I can't listen in the w..."}, {"role": "user", "content": "Tell me 5 lines on poetry."}]
+2025-04-27 12:15:58,904 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 12:16:03,788 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 12:16:03,789 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Poetry is the art of crafting ...'
+2025-04-27 12:16:59,519 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 6 messages
+2025-04-27 12:16:59,520 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen?"}, {"role": "assistant", "content": "Hello! I can't listen in the w..."}, {"role": "user", "content": "Tell me 5 lines on poetry."}, {"role": "assistant", "content": "Poetry is the art of crafting ..."}, {"role": "user", "content": "So tell me a."}]
+2025-04-27 12:16:59,520 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 12:17:05,180 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 12:17:05,181 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'A poem, you mean? Here's a sim...'
+2025-04-27 12:17:34,545 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 8 messages
+2025-04-27 12:17:34,547 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello, are you able to listen?"}, {"role": "assistant", "content": "Hello! I can't listen in the w..."}, {"role": "user", "content": "Tell me 5 lines on poetry."}, {"role": "assistant", "content": "Poetry is the art of crafting ..."}, {"role": "user", "content": "So tell me a."}, {"role": "assistant", "content": "A poem, you mean? Here's a sim..."}, {"role": "user", "content": "Stop. I want to end."}]
+2025-04-27 12:17:34,548 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 12:17:36,858 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 12:17:36,859 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'I'm here to help with whatever...'
+2025-04-27 12:18:25,171 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:18:25,172 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 12:18:25,173 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 12:18:25,174 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:18:38,058 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 12:18:38,060 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 12:18:38,360 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 12:18:38,937 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 12:18:42,200 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 12:18:42,201 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}]
+2025-04-27 12:18:42,202 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 12:18:43,461 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 12:18:43,463 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hi there! How can I help you t...'
+2025-04-27 12:18:51,622 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 12:18:51,623 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hi there! How can I help you t..."}, {"role": "user", "content": "What is the temperature right ..."}]
+2025-04-27 12:18:51,624 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 12:18:53,791 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 12:18:53,793 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'I can't check real-time inform...'
+2025-04-27 12:21:24,162 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:21:24,163 - voice_avatar_chatbot.config - INFO - API keys loaded successfully
+2025-04-27 12:21:24,166 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 12:21:24,167 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:21:49,452 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:21:49,452 - voice_avatar_chatbot.config - WARNING - Missing API keys: SERPER_API_KEY
+2025-04-27 12:21:49,455 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 12:21:49,455 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:22:22,241 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:22:22,242 - voice_avatar_chatbot.config - WARNING - Missing API keys: SERPER_API_KEY
+2025-04-27 12:22:22,244 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 12:22:22,245 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:22:48,087 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:22:48,088 - voice_avatar_chatbot.config - WARNING - Missing API keys: SERPER_API_KEY
+2025-04-27 12:22:48,090 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 12:22:48,091 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:23:24,014 - voice_avatar_chatbot.config - INFO - Environment variables loaded successfully
+2025-04-27 12:23:24,015 - voice_avatar_chatbot.config - WARNING - Missing API keys: SERPER_API_KEY
+2025-04-27 12:23:24,016 - voice_avatar_chatbot.routes - INFO - API routes configured successfully
+2025-04-27 12:23:24,017 - voice_avatar_chatbot - INFO - Static files mounted successfully
+2025-04-27 12:23:30,021 - voice_avatar_chatbot - INFO - Root endpoint accessed - serving index.html
+2025-04-27 12:23:30,022 - voice_avatar_chatbot - INFO - Serving static/index.html file
+2025-04-27 12:23:30,311 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 12:23:30,907 - voice_avatar_chatbot.routes.test - INFO - API test endpoint accessed
+2025-04-27 12:23:34,146 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 2 messages
+2025-04-27 12:23:34,147 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}]
+2025-04-27 12:23:34,149 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 12:23:35,659 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 12:23:35,660 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'Hello! How can I assist you to...'
+2025-04-27 12:23:44,114 - voice_avatar_chatbot.routes.chat - INFO - Generate text request received with 4 messages
+2025-04-27 12:23:44,115 - voice_avatar_chatbot.routes.chat - DEBUG - Messages content: [{"role": "system", "content": "You are a helpful, friendly, a..."}, {"role": "user", "content": "Hello."}, {"role": "assistant", "content": "Hello! How can I assist you to..."}, {"role": "user", "content": "I want to know about the weath..."}]
+2025-04-27 12:23:44,116 - voice_avatar_chatbot.routes.chat - DEBUG - Sending request to OpenAI Chat API
+2025-04-27 12:23:48,977 - voice_avatar_chatbot.routes.chat - DEBUG - OpenAI Chat API response status: 200
+2025-04-27 12:23:48,978 - voice_avatar_chatbot.routes.chat - INFO - Successfully generated text: 'I can't provide real-time weat...'

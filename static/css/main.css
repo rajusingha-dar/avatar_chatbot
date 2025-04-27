@@ -1,0 +1,165 @@
+/* Base Colors and Theme */
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #4a90e2;
+    --accent-hover: #3a7bc8;
+    --record-color: #e74c3c;
+    --record-hover: #c0392b;
+    --message-user: #2d4059;
+    --message-bot: #2a2a2a;
+    --status-color: #989898;
+}
+
+/* General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.conversation {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    max-width: 75%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: var(--message-user);
+    margin-left: auto;
+    text-align: right;
+}
+
+.bot-message {
+    background-color: var(--message-bot);
+    margin-right: auto;
+}
+
+.status {
+    text-align: center;
+    font-style: italic;
+    color: var(--status-color);
+    margin: 10px 0;
+}
+
+/* Avatar State */
+#avatar-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: background-color 0.4s, transform 0.4s;
+}
+
+.avatar-placeholder {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #333;
+}
+
+.avatar-state {
+    position: absolute;
+    top: 160px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Avatar Animations */
+#avatar-container.listening {
+    background-color: #a8e6cf;
+    animation: pulseListening 1.5s infinite;
+}
+
+#avatar-container.thinking {
+    background-color: #ffeaa7;
+    animation: pulseThinking 2s infinite;
+}
+
+#avatar-container.speaking {
+    background-color: #d9bbf9;
+    animation: pulseSpeaking 1.5s infinite;
+}
+
+/* Keyframes */
+@keyframes pulseListening {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes pulseThinking {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+@keyframes pulseSpeaking {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+}
+
+/* Audio Visualizer */
+.audio-visualizer {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 10px;
+}
+
+.visualizer-bar {
+    width: 5px;
+    height: 10px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    transition: height 0.2s ease;
+}
+
+/* Debug panel */
+.debug-panel {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+}
+
+.debug-panel.visible {
+    display: block;
+}
+
+.debug-entry {
+    margin-bottom: 5px;
+}

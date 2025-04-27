@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Avatar Chatbot</title>
+    <link rel="stylesheet" href="/static/css/main.css?v=2">
+</head>
+<body>
+    <div class="container">
+        <h1>Voice Avatar Chatbot</h1>
+        <p class="subtitle">Talk naturally. No buttons needed!</p>
+
+        <!-- Avatar -->
+        <div id="avatar-container" class="idle">
+            <div class="avatar-placeholder">AI</div>
+            <div class="avatar-state">Idle</div>
+        </div>
+
+        <!-- Conversation Section -->
+        <div class="conversation" id="chatContainer">
+            <div class="message bot-message">Hello! I'm your AI assistant. Start speaking to chat with me!</div>
+        </div>
+
+        <!-- Status -->
+        <p class="status" id="status">Waiting for your voice...</p>
+
+        <!-- Audio Visualizer -->
+        <div id="audioVisualizer" class="audio-visualizer">
+            <div class="visualizer-bar"></div>
+            <div class="visualizer-bar"></div>
+            <div class="visualizer-bar"></div>
+            <div class="visualizer-bar"></div>
+            <div class="visualizer-bar"></div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="micError" class="error-message" style="display:none;">Microphone access is required to use voice features.</div>
+
+        <!-- Debug panel (tap top right corner) -->
+        <div id="debugTapArea" class="debug-tap-area"></div>
+        <div id="debugPanel" class="debug-panel">
+            <div id="debugLog"></div>
+        </div>
+    </div>
+
+    <!-- Load Scripts (with cache busting v=2) -->
+    <script type="module" src="/static/js/app.js?v=2"></script>
+    <script type="module" src="/static/js/audioProcessor.js?v=2"></script>
+    <script type="module" src="/static/js/avatarController.js?v=2"></script>
+    <script type="module" src="/static/js/apiClient.js?v=2"></script>
+</body>
+</html>
